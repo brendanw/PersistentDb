@@ -1,0 +1,12 @@
+import kotlin.Boolean;
+
+CREATE TABLE ContentStatus (
+    id INTEGER NOT NULL PRIMARY KEY,
+    hasContent INTEGER AS Boolean NOT NULL
+);
+
+hasContent:
+SELECT hasContent FROM ContentStatus WHERE id = 1;
+
+updateHasContent:
+UPDATE ContentStatus SET hasContent = :newHasContent WHERE id = 1;
